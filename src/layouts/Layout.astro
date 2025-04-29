@@ -8,18 +8,26 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<div>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style is:global>
-	html,
+	html{
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		background-color: black;
+		color: white;
+	}
 	body {
+		@apppy grid place-content-center p-20;
 		margin: 0;
 		width: 100%;
 		height: 100%;
-		color: white;
-		background-color: black;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	body > div {
+		@apply container;
 	}
 </style>
